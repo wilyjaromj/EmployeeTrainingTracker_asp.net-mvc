@@ -11,6 +11,7 @@ namespace EmployeeTrainingTracker.Data.Models
     {
         [Key]
         public int Id { get; set; }
+        [MaxLength(100)]
         public string Name { get; set; }
         public DateTime Date { get; set; }
     }
