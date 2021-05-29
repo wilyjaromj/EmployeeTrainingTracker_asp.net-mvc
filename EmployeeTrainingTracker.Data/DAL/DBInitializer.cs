@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmployeeTrainingTracker.Data.DAL
+namespace EmployeeTrainingTracker.Data
 {
     class DBInitializer : DropCreateDatabaseIfModelChanges<EmployeeTrainingDB>
     {

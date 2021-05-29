@@ -1,0 +1,12 @@
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker.Data\bin\Debug\EmployeeTrainingTracker.Data.dll.config
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker.Data\bin\Debug\EmployeeTrainingTracker.Data.dll
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker.Data\bin\Debug\EmployeeTrainingTracker.Data.pdb
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker.Data\bin\Debug\EntityFramework.dll
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker.Data\bin\Debug\EntityFramework.xml
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker.Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker.Data\obj\Debug\Data.csproj.CopyComplete
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker.Data\obj\Debug\EmployeeTrainingTracker.Data.dll
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker.Data\obj\Debug\EmployeeTrainingTracker.Data.pdb
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker.Data\obj\Debug\Data.csprojAssemblyReference.cache

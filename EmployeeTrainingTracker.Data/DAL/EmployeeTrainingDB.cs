@@ -11,7 +11,9 @@ namespace EmployeeTrainingTracker.Data
 {
     class EmployeeTrainingDB : DbContext
     {
-        public EmployeeTrainingDB() : base("EmployeeTrainingDB") { }
+        public EmployeeTrainingDB() : base("name=EmployeeTrainingDB") {
+            Database.SetInitializer(new DBInitializer());
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

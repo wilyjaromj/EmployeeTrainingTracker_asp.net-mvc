@@ -77,3 +77,10 @@ C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker\obj\Debug\EmployeeTrainin
 C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker\obj\Debug\EmployeeTrainingTracker.csproj.CopyComplete
 C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker\obj\Debug\EmployeeTrainingTracker.dll
 C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker\obj\Debug\EmployeeTrainingTracker.pdb
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker\bin\EmployeeTrainingTracker.Data.dll
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker\bin\EntityFramework.dll
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker\bin\EmployeeTrainingTracker.Data.pdb
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker\bin\EmployeeTrainingTracker.Data.dll.config
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker\bin\EntityFramework.xml
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker\bin\EntityFramework.SqlServer.dll
+C:\dev\EmployeeTrainingTracker\EmployeeTrainingTracker\bin\EntityFramework.SqlServer.xml

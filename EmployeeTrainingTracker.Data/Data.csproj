@@ -51,7 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\EmployeeTrainingDB.cs" />
+    <Compile Include="DAL\DBInitializer.cs" />
+    <Compile Include="DAL\EmployeeTrainingDB.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeTrained.cs" />
     <Compile Include="Models\Training.cs" />
@@ -59,6 +60,8 @@
     <Compile Include="Services\IEmployeeData.cs" />
     <Compile Include="Services\IEmployeeTrainedData.cs" />
     <Compile Include="Services\ITrainingData.cs" />
+    <Compile Include="Services\SqlEmployeeData.cs" />
+    <Compile Include="Services\SqlTrainingData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
