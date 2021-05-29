@@ -1,0 +1,29 @@
+﻿@using EmployeeTrainingTracker.Data.Models
+@model IEnumerable<Training>
+@{
+    Layout = null;
+}
+
+<table id="trainingTable" class="table table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var training in Model)
+        {
+            <tr>
+                <td>@training.Id</td>
+                <td>@training.Name</td>
+                <td>@training.Date.ToString("d MMM yyyy")</td>
+                <td>
+                    <button class="btn btn-warning" type="button" onclick="loadEditTraining('@training.Id');">Edit</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

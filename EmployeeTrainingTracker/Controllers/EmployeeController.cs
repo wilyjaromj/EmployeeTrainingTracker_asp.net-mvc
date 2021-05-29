@@ -18,8 +18,7 @@ namespace EmployeeTrainingTracker.Controllers
 
         public ActionResult Index()
         {
-            var employees = employeeData.GetAllEmployees();
-            return View(employees);
+            return View(employeeData.GetAllEmployees());
         }
     }
 }

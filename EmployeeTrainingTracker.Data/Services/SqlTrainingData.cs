@@ -9,16 +9,49 @@ namespace EmployeeTrainingTracker.Data.Services
 {
     public class SqlTrainingData : ITrainingData
     {
-        public Training AddNewTraining(Training training)
+        EmployeeTrainingDB context;
+
+        public SqlTrainingData()
         {
-            throw new NotImplementedException();
+            context = new EmployeeTrainingDB();
+        }
+
+        public string AddNewTraining(Training training)
+        {
+            try
+            {
+                context.Trainings.Add(training);
+                context.SaveChanges();
+                return "success";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
 
         public IEnumerable<Training> GetAllTrainings()
         {
-            using (var ctx = new EmployeeTrainingDB())
+            return context.Trainings.ToList();
+        }
+
+        public Training GetTrainingById(int id)
+        {
+            return context.Trainings.Find(id);
+        }
+
+        public string UpdateTraining(Training training)
+        {
+            try
             {
-                return ctx.Trainings.ToList();
+                Training original = context.Trainings.Find(training.Id);
+                context.Entry(original).CurrentValues.SetValues(training);
+                context.SaveChanges();
+                return "success";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
             }
         }
     }

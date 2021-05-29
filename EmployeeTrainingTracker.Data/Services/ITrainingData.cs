@@ -10,6 +10,10 @@ namespace EmployeeTrainingTracker.Data.Services
     {
         IEnumerable<Training> GetAllTrainings();
 
-        Training AddNewTraining(Training training);
+        Training GetTrainingById(int id);
+
+        string AddNewTraining(Training training);
+
+        string UpdateTraining(Training training);
     }
 }
