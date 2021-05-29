@@ -11,5 +11,7 @@ namespace EmployeeTrainingTracker.Data.Services
         IEnumerable<EmployeeTrained> GetTrainingRoll(int trainingID);
         IEnumerable<EmployeeTrained> GetEmployeesWhoAttended(int trainingID);        
         IEnumerable<EmployeeTrained> GetEmployeesWhoDidNotAttendButShouldHave(int trainingID);
+        string CreateExpectedAttendeesList(List<int> employeeIds);
+        string AddNewEmployeeTrained(EmployeeTrained record);
     }
 }

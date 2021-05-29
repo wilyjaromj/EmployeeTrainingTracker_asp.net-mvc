@@ -30,6 +30,28 @@ namespace EmployeeTrainingTracker.Data.Services
             }
         }
 
+        public string DeleteTraining(int id)
+        {
+            try
+            {
+                // There may be employees marked as attending this training, have to clear them out first
+                if (context.EmployeesTrained.Any(et => et.TrainingId == id))
+                {
+                    List<EmployeeTrained> employeesTrained = context.EmployeesTrained.Where(et => et.TrainingId == id)
+                                                                                     .ToList();
+                    context.EmployeesTrained.RemoveRange(employeesTrained);
+                }
+
+                context.Trainings.Remove(context.Trainings.Find(id));
+                context.SaveChanges();
+                return "success";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }            
+        }
+
         public IEnumerable<Training> GetAllTrainings()
         {
             return context.Trainings.ToList();

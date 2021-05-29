@@ -61,6 +61,7 @@
     <Compile Include="Services\IEmployeeTrainedData.cs" />
     <Compile Include="Services\ITrainingData.cs" />
     <Compile Include="Services\SqlEmployeeData.cs" />
+    <Compile Include="Services\SqlEmployeeTrainedData.cs" />
     <Compile Include="Services\SqlTrainingData.cs" />
   </ItemGroup>
   <ItemGroup>

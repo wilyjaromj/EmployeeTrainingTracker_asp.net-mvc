@@ -10,7 +10,7 @@
             <th>Id</th>
             <th>Name</th>
             <th>Date</th>
-            <th>Edit</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -21,7 +21,8 @@
                 <td>@training.Name</td>
                 <td>@training.Date.ToString("d MMM yyyy")</td>
                 <td>
-                    <button class="btn btn-warning" type="button" onclick="loadEditTraining('@training.Id');">Edit</button>
+                    <button class="btn btn-warning mr-3" type="button" onclick="loadEditTraining('@training.Id');">Edit</button>
+                    <button class="btn btn-danger" type="button" onclick="loadDeleteTraining('@training.Id');">Delete</button>
                 </td>
             </tr>
         }

@@ -67,5 +67,20 @@ namespace EmployeeTrainingTracker.Controllers
                 return Json(new { status = "error", message = result });
             }
         }
+
+        [HttpPost]
+        public ActionResult DeleteTraining(int idToDelete)
+        {
+            string result = trainingData.DeleteTraining(idToDelete);
+
+            if (result == "success")
+            {
+                return Json(new { status = result });
+            }
+            else
+            {
+                return Json(new { status = "error", message = result });
+            }
+        }
     }
 }
