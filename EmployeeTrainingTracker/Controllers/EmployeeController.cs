@@ -1,8 +1,4 @@
 ﻿using EmployeeTrainingTracker.Data.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace EmployeeTrainingTracker.Controllers
@@ -16,6 +12,7 @@ namespace EmployeeTrainingTracker.Controllers
             employeeData = new SqlEmployeeData();
         }
 
+        [HttpGet]
         public ActionResult Index()
         {
             return View(employeeData.GetAllEmployees());

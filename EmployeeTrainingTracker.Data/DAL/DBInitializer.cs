@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EmployeeTrainingTracker.Data
 {
@@ -39,30 +36,27 @@ namespace EmployeeTrainingTracker.Data
 
             var employeesTrained = new List<EmployeeTrained>
             {
-                new EmployeeTrained { EmployeeId = 1, TrainingId = 1, Attended = false },
-                new EmployeeTrained { EmployeeId = 1, TrainingId = 2, Attended = true },
-                new EmployeeTrained { EmployeeId = 1, TrainingId = 3, Attended = true },
-                new EmployeeTrained { EmployeeId = 1, TrainingId = 4, Attended = false },
-                new EmployeeTrained { EmployeeId = 1, TrainingId = 5, Attended = true },
-                new EmployeeTrained { EmployeeId = 1, TrainingId = 6, Attended = true },
-                new EmployeeTrained { EmployeeId = 2, TrainingId = 1, Attended = true },
-                new EmployeeTrained { EmployeeId = 2, TrainingId = 2, Attended = true },
-                new EmployeeTrained { EmployeeId = 2, TrainingId = 3, Attended = true },
-                new EmployeeTrained { EmployeeId = 2, TrainingId = 4, Attended = false },
-                new EmployeeTrained { EmployeeId = 2, TrainingId = 5, Attended = true },
-                new EmployeeTrained { EmployeeId = 2, TrainingId = 6, Attended = true },
-                new EmployeeTrained { EmployeeId = 3, TrainingId = 3, Attended = false },
-                new EmployeeTrained { EmployeeId = 3, TrainingId = 4, Attended = true },
-                new EmployeeTrained { EmployeeId = 3, TrainingId = 5, Attended = true },
-                new EmployeeTrained { EmployeeId = 3, TrainingId = 6, Attended = true },
-                new EmployeeTrained { EmployeeId = 4, TrainingId = 2, Attended = true },
-                new EmployeeTrained { EmployeeId = 4, TrainingId = 3, Attended = true },
-                new EmployeeTrained { EmployeeId = 4, TrainingId = 4, Attended = true },
-                new EmployeeTrained { EmployeeId = 5, TrainingId = 1, Attended = false },
-                new EmployeeTrained { EmployeeId = 5, TrainingId = 2, Attended = true },
-                new EmployeeTrained { EmployeeId = 5, TrainingId = 3, Attended = true },
-                new EmployeeTrained { EmployeeId = 5, TrainingId = 4, Attended = true },
-                new EmployeeTrained { EmployeeId = 5, TrainingId = 5, Attended = false }
+                new EmployeeTrained { EmployeeId = 1, TrainingId = 1 },
+                new EmployeeTrained { EmployeeId = 1, TrainingId = 2 },
+                new EmployeeTrained { EmployeeId = 1, TrainingId = 3 },
+                new EmployeeTrained { EmployeeId = 1, TrainingId = 4 },
+                new EmployeeTrained { EmployeeId = 1, TrainingId = 5 },
+                new EmployeeTrained { EmployeeId = 1, TrainingId = 6 },
+                new EmployeeTrained { EmployeeId = 2, TrainingId = 1 },
+                new EmployeeTrained { EmployeeId = 2, TrainingId = 2 },
+                new EmployeeTrained { EmployeeId = 2, TrainingId = 4 },
+                new EmployeeTrained { EmployeeId = 2, TrainingId = 5 },
+                new EmployeeTrained { EmployeeId = 2, TrainingId = 6 },
+                new EmployeeTrained { EmployeeId = 3, TrainingId = 3 },
+                new EmployeeTrained { EmployeeId = 3, TrainingId = 5 },
+                new EmployeeTrained { EmployeeId = 3, TrainingId = 6 },
+                new EmployeeTrained { EmployeeId = 4, TrainingId = 2 },
+                new EmployeeTrained { EmployeeId = 4, TrainingId = 3 },
+                new EmployeeTrained { EmployeeId = 4, TrainingId = 4 },
+                new EmployeeTrained { EmployeeId = 5, TrainingId = 2 },
+                new EmployeeTrained { EmployeeId = 5, TrainingId = 3 },
+                new EmployeeTrained { EmployeeId = 5, TrainingId = 4 },
+                new EmployeeTrained { EmployeeId = 5, TrainingId = 5 }
             };
 
             context.EmployeesTrained.AddRange(employeesTrained);

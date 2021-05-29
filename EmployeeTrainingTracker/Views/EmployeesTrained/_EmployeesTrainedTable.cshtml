@@ -1,0 +1,23 @@
+﻿@using EmployeeTrainingTracker.Data.Models
+@model IEnumerable<EmployeeTrained>
+@{
+    Layout = null;
+}
+
+<table id="employeesTrainedTable" class="table table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employeeTrained in Model)
+        {
+            <tr>
+                <td>@employeeTrained.Employee.Id</td>
+                <td>@employeeTrained.Employee.FirstName @employeeTrained.Employee.LastName</td>
+            </tr>
+        }
+    </tbody>
+</table>

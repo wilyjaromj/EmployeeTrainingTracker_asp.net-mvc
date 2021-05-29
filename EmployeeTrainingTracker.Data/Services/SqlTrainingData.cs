@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EmployeeTrainingTracker.Data.Services
 {
@@ -37,7 +35,7 @@ namespace EmployeeTrainingTracker.Data.Services
                 // There may be employees marked as attending this training, have to clear them out first
                 if (context.EmployeesTrained.Any(et => et.TrainingId == id))
                 {
-                    List<EmployeeTrained> employeesTrained = context.EmployeesTrained.Where(et => et.TrainingId == id)
+                    var employeesTrained = context.EmployeesTrained.Where(et => et.TrainingId == id)
                                                                                      .ToList();
                     context.EmployeesTrained.RemoveRange(employeesTrained);
                 }
@@ -66,7 +64,7 @@ namespace EmployeeTrainingTracker.Data.Services
         {
             try
             {
-                Training original = context.Trainings.Find(training.Id);
+                var original = context.Trainings.Find(training.Id);
                 context.Entry(original).CurrentValues.SetValues(training);
                 context.SaveChanges();
                 return "success";

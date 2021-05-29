@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Employees Trained";
+}
+
+<div class="row mx-0 justify-content-between">
+    <h2>Employees Trained</h2>
+    <button class="btn btn-success" type="button" onclick="loadMarkEmployeeTrained();">Mark Employee Trained</button>
+</div>
+<br />
+<div class="alert alert-success" id="success" style="display:none;"></div>
+<div class="alert alert-warning" id="warning" style="display:none;"></div>
+<h6>Pick a training below to view employees who have completed it or click 'Mark Employee Trained' to mark that an employee has completed a training.</h6>
+<br />
+@Html.Action("TrainingTable", "Training", new { forMarking = true })
+
+@* mark employee trained modal *@
+<div class="modal" role="dialog" id="markTrainedModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Mark Employee Trained</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="markTrainedModalBody"></div>
+        </div>
+    </div>
+</div>
+
+@* view employees trained modal *@
+<div class="modal" role="dialog" id="viewEmployeesTrainedModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Employees Trained</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="viewEmployeesTrainedModalBody"></div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/site/employees-trained.js"></script>

@@ -2,36 +2,37 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EmployeeTrainingTracker.Data.Services
 {
     public class SqlEmployeeTrainedData : IEmployeeTrainedData
     {
-        public string AddNewEmployeeTrained(EmployeeTrained record)
+        EmployeeTrainingDB context;
+
+        public SqlEmployeeTrainedData()
         {
-            throw new NotImplementedException();
+            context = new EmployeeTrainingDB();
         }
 
-        public string CreateExpectedAttendeesList(List<int> employeeIds)
+        public string AddNewEmployeeTrained(EmployeeTrained record)
         {
-            throw new NotImplementedException();
+            try
+            {
+                context.EmployeesTrained.Add(record);
+                context.SaveChanges();
+                return "success";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
 
         public IEnumerable<EmployeeTrained> GetEmployeesWhoAttended(int trainingID)
         {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<EmployeeTrained> GetEmployeesWhoDidNotAttendButShouldHave(int trainingID)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<EmployeeTrained> GetTrainingRoll(int trainingID)
-        {
-            throw new NotImplementedException();
+            return context.EmployeesTrained.Include("Employee")
+                                           .Where(et => et.TrainingId == trainingID)
+                                           .ToList();
         }
     }
 }

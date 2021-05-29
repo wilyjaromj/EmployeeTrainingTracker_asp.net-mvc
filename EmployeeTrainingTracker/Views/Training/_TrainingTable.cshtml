@@ -2,6 +2,7 @@
 @model IEnumerable<Training>
 @{
     Layout = null;
+    bool forMarking = (bool)ViewBag.ForMarking;
 }
 
 <table id="trainingTable" class="table table-bordered table-striped">
@@ -20,10 +21,19 @@
                 <td>@training.Id</td>
                 <td>@training.Name</td>
                 <td>@training.Date.ToString("d MMM yyyy")</td>
-                <td>
-                    <button class="btn btn-warning mr-3" type="button" onclick="loadEditTraining('@training.Id');">Edit</button>
-                    <button class="btn btn-danger" type="button" onclick="loadDeleteTraining('@training.Id');">Delete</button>
-                </td>
+                @if (forMarking)
+                {
+                    <td>
+                        <button class="btn btn-primary mr-3" type="button" onclick="loadViewEmployees('@training.Id');">View Employees</button>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <button class="btn btn-warning mr-3" type="button" onclick="loadEditTraining('@training.Id');">Edit</button>
+                        <button class="btn btn-danger" type="button" onclick="loadDeleteTraining('@training.Id');">Delete</button>
+                    </td>
+                }
             </tr>
         }
     </tbody>

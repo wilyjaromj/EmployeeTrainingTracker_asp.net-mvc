@@ -21,8 +21,9 @@ namespace EmployeeTrainingTracker.Controllers
         }
 
         [HttpGet]
-        public ActionResult TrainingTable()
+        public ActionResult TrainingTable(bool forMarking = false)
         {
+            ViewBag.ForMarking = forMarking;
             return View("_TrainingTable", trainingData.GetAllTrainings());
         }
 
@@ -71,7 +72,7 @@ namespace EmployeeTrainingTracker.Controllers
         [HttpPost]
         public ActionResult DeleteTraining(int idToDelete)
         {
-            string result = trainingData.DeleteTraining(idToDelete);
+            var result = trainingData.DeleteTraining(idToDelete);
 
             if (result == "success")
             {

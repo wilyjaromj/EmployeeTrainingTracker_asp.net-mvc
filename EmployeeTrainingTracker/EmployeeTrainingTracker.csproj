@@ -131,7 +131,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="Controllers\EmployeesTrainedController.cs" />
     <Compile Include="Controllers\TrainingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -188,6 +188,7 @@
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\site\employees-trained.js" />
     <Content Include="Scripts\site\site.js" />
     <Content Include="Scripts\site\trainings.js" />
     <Content Include="Scripts\src\index.js" />
@@ -273,7 +274,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\Training\Index.cshtml" />
-    <Content Include="Views\Report\Index.cshtml" />
+    <Content Include="Views\EmployeesTrained\Index.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.js.flow" />
@@ -286,6 +287,8 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Training\_AddEditModal.cshtml" />
     <Content Include="Views\Training\_TrainingTable.cshtml" />
+    <Content Include="Views\EmployeesTrained\_EmployeesTrainedTable.cshtml" />
+    <Content Include="Views\EmployeesTrained\_MarkEmployeeTrainedForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

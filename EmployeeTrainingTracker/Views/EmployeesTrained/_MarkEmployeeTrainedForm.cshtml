@@ -1,0 +1,31 @@
+﻿@using EmployeeTrainingTracker.Data.Models
+@{
+    Layout = null;
+    var employeeSelect = (List<SelectListItem>)ViewBag.Employees;
+    var trainingSelect = (List<SelectListItem>)ViewBag.Trainings;
+}
+
+@using (Ajax.BeginForm("MarkEmployeeTrained", "EmployeesTrained",
+    new AjaxOptions
+    {
+        HttpMethod = "Post",
+        OnSuccess = "markTrainedSuccess",
+        OnFailure = "markTrainedFailure"
+    }))
+{
+    <div class="col-12">
+        <strong>Select an Employee</strong>
+        <br />
+        @Html.DropDownList("employeeId", employeeSelect)
+        <br /><br />
+        <strong>Select a Training</strong>
+        <br />
+        @Html.DropDownList("trainingId", trainingSelect)
+        <hr />
+        <div class="row mx-0 justify-content-end">
+            <button class="btn mr-2 btn-success" type="submit">Submit</button>
+            <button class="btn btn-secondary" type="button" onclick="$('#markTrainedModal').modal('hide');">Cancel</button>
+        </div>
+    </div>
+}
+

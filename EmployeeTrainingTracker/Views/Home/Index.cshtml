@@ -4,17 +4,10 @@
 
 <div class="jumbotron">
     <h1>Employee Training</h1>
-    <p class="lead">This application helps keep track of company trainings and which employees have/have not attended.</p>
+    <p class="lead">This application helps keep track of company trainings and which employees have/have not been trained.</p>
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Get Reports</h2>
-        <p>
-            Run reports that show you which employees have attended a given training, or which trainings an employee has attended.
-        </p>
-        <p><a class="btn btn-outline-dark" href="@Url.Action("Index", "Report")">Run Reports &raquo;</a></p>
-    </div>
     <div class="col-md-4">
         <h2>See Employees</h2>
         <p>
@@ -25,8 +18,15 @@
     <div class="col-md-4">
         <h2>See Trainings</h2>
         <p>
-            View a list of all company trainigs.
+            View a list of all company trainigs. Add a new training. Edit an existing training. Delete an existing training.
         </p>
         <p><a class="btn btn-outline-dark" href="@Url.Action("Index", "Training")">View Trainings &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>See Employees Trained</h2>
+        <p>
+            View which employees have attended a training. Mark that an employee has attended a training.
+        </p>
+        <p><a class="btn btn-outline-dark" href="@Url.Action("Index", "EmployeesTrained")">View Employees Trained &raquo;</a></p>
     </div>
 </div>
